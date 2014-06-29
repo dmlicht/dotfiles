@@ -3,11 +3,8 @@ set nocompatible "makes vim incompatible with vi (cnges some mappings)
 filetype on
 filetype off "required for vundle
 
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'JuliaLang/julia-vim'
@@ -18,13 +15,15 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'majutsushi/tagbar'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'klen/python-mode'
+Plugin 'fatih/vim-go'
 
 " Plugin 'rking/ag.vim'
 " Plugin 'https://github.com/vim-scripts/taglist.vim'
 " Plugin 'terryma/vim-multiple-cursors'
 
-"call vundle#end()            " required vundle
-filetype plugin indent on     " required vundle
+call vundle#end()            " required vundle
+filetype plugin indent on    " required vundle
 
 set syntax=on
 set shiftwidth=2
