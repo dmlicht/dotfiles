@@ -32,8 +32,8 @@ function update_file {
 }
 
 function source_if_present {
-  if [ -e $CONFIG_DIR/$1 ]
+  if [ -e $1 ]
   then
-    source $CONFIG_DIR/$1
+    source $1
   fi
 }
