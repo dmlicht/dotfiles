@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Color ls output
+alias ls="ls -G"
+
+# for easier gradlew calls
+alias gradlew="./gradlew"
+
+# git shortcuts 
+alias co="git checkout"
+alias ga="git add"
+alias gc="git commit -v"
+alias gs="git status"
+alias gb="git branch"
+
+alias lc="adb logcat -v time"
+
+# opens git conflict files in vim 
+alias confl="git status | grep 'modified' | awk '{print $3;}' | xargs vim -p"
+
+alias grep="grep -i"
+alias unit="../gradlew unitTest --stacktrace"
+
+# ctags quick hack
+alias ctags="/usr/local/Cellar/ctags/5.8/bin/ctags"
+
+# alias julia="/Applications/Julia-0.2.1.app/Contents/Resources/julia/bin/julia"
+
+alias slate="vim ~/.slate"
+alias vrc="vim ~/.vimrc"
+
+alias jt="julia src/discover_tests.jl"
+alias dot="cd ~/dotfiles"

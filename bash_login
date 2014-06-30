@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export ECLIPSE_HOME=/Applications/eclipse
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/
+
+# Gradle configuration 
+export GRADLE_HOME=/Applications/gradle-1.9
+export PATH=$GRADLE_HOME/bin:$PATH
+
+# Append Julia Home to path
+JULIA_HOME=/Applications/Julia-0.2.1.app/Contents/Resources/julia
+export PATH=$PATH:$JULIA_HOME/bin
+export PATH=$PATH:$JULIA_HOME
+
+# Append Go Home to path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

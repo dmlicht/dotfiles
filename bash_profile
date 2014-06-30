@@ -1,8 +1,16 @@
 #!/bin/bash
 
-source ~/.bash_login
-source ~/.bash_functions
-source ~/.alias
+CONFIG_DIR=~/dotfiles
+source $CONFIG_DIR/bash_functions
+
+PERKA_SPECIFIC="bash_perka perka_aliases"
+# run perka specific files if on work machine
+for file in PERKA_SPECIFIC; do
+  source_if_present file
+done
+
+source $CONFIG_DIR/bash_login
+source $CONFIG_DIR/aliases
 
 # set vim keybindings for bash
 # set -o vi
