@@ -7,16 +7,17 @@ cd $CONFIG_DIR
 git pull origin master > /dev/null
 cd
 
-source $CONFIG_DIR/bash_functions
-
-PERKA_SPECIFIC="bash_perka perka_aliases"
-# run perka specific files if on work machine
-for file in PERKA_SPECIFIC; do
-  source_if_present file
-done
+source $CONFIG_DIR/functions
 
 source $CONFIG_DIR/bash_login
 source $CONFIG_DIR/aliases
+
+# WORK CONFIG
+PERKA_SPECIFIC="bash_perka perka_aliases"
+for file in $PERKA_SPECIFIC; do
+  echo $CONFIG_DIR/$file
+  source_if_present $CONFIG_DIR/$file
+done
 
 # set vim keybindings for bash
 # set -o vi
