@@ -1,0 +1,24 @@
+[user]
+	name = David Lichtenberg
+	email = david@getperka.com
+[color]
+	ui = true
+[format]
+	# pretty = oneline
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = default-difftool.sh $LOCAL $REMOTE
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	excludesfile = /Users/dmlicht/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
