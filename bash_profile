@@ -1,6 +1,12 @@
 #!/bin/bash
 
 CONFIG_DIR=~/dotfiles
+
+# ON START - check if we've updated resource config files
+cd $CONFIG_DIR
+git pull origin master > /dev/null
+cd
+
 source $CONFIG_DIR/bash_functions
 
 PERKA_SPECIFIC="bash_perka perka_aliases"
