@@ -15,7 +15,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'majutsushi/tagbar'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 Plugin 'fatih/vim-go'
 
 " Plugin 'rking/ag.vim'

@@ -16,7 +16,12 @@ function android_project {
   mv deckard-gradle-master $1
 }
 
-BASH_FUNCTIONS=~/dotfiles/bash_functions
+function run {
+  javac $1.java
+  java $1
+}
+
+BASH_FUNCTIONS=~/dotfiles/functions
 BASH_ALIASES=~/dotfiles/aliases
 
 # update functions
